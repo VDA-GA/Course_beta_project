@@ -2,7 +2,7 @@ import datetime as dt
 import json
 import logging
 import os
-from typing import List, Any
+from typing import Any, List, Union
 
 import pandas as pd
 import requests
@@ -90,7 +90,7 @@ def filter_df_according_to_period(
 
 def get_expenses_or_income_transactions(
         df_data: pd.DataFrame,
-) -> tuple[pd.Series[Any], pd.Series[Any]]:
+) -> tuple:
     """Получает кортеж из DataFrame объектов трат и приходов
     :param df_data: исходный DataFrame
     :return кортеж из DataFrame объектов трат и приходов"""
